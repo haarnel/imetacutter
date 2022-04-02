@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+
+body {
+  max-width: 1360px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem 0 2rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo {
+  width: 5.5rem;
+}
+
+
+.main__content {
+  display: flex;
+  margin-top: 3rem;
+  flex: 1 0 60rem;
+}
+
+.control-panel {
+  flex: 0 0 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.control-pane__buttons {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.photo-preview {
+  max-width: 100%;
+  border-radius: .5rem;
+  background-size: cover;
+  flex-basis: 40%;
+}
+
+.btn {
+  display: inline-block;
+  color: #4e4b43;
+  border: 2px solid #afada7;
+  background-color: white;
+  font-size: 1.8rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: .5rem;
+}
+
+#open-photo {
+  text-align: center;
+}
+
+.btn:disabled,
+.btn[disabled] {
+  background-color: #D3D3D3;
+  border: 2px solid #D3D3D3;
+}
+
+.table-content {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.table-wrapper {
+  overflow-y: auto;
+  max-height: 56rem;
+  scrollbar-width: none;
+}
+
+.table-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.table {
+  border-collapse: collapse;
+  border-radius: 5px 5px 0 0;
+  min-width: 100%;
+}
+
+.table thead tr {
+  background-color: #F1F1F6;
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+#table-body tr:first-child {
+  display: none;
+}
+
+.table th {
+  position: sticky;
+  top: 0;
+  background-color: #F1F1F6;
+}
+
+.table th,
+.table td {
+  padding: 1.2rem 1.5rem;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #E8E8E8;
+  font-size: 1.5rem;
+  transition: all .3s;
+}
+
+.table tbody tr:last-child {
+  border-bottom: 0;
+}
+
+.table tbody tr:hover {
+  background-color: #F1F1F6;
+}
+
+.table td:first-child {
+  width: 10px;
+}
+
+
+.map-source {
+  margin-top: 3rem;
+  flex-grow: 1;
+}
+
+#map {
+  background-color: grey;
+  border-radius: .5rem;
+  height: 500px;
+}
+
+@media (max-width: 650px) {
+  .main__content {
+    flex-direction: column;
+  }
+
+  .table-content {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+
+  #map {
+    border-radius: 0;
+  }
+}
+
+/* .container {
+  margin: 5rem 0 3rem 0;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.photo-preview {
+  max-width: 100%;
+  border-radius: .5rem;
+  background-size: cover;
+  flex-basis: 40%;
+}
+
+
+.table-content {
+  flex-basis: 100%;
+  overflow-y: scroll;
+}
+
+.table {
+  border-collapse: collapse;
+  border-radius: 5px 5px 0 0;
+  min-width: 100%;
+}
+
+.table thead tr {
+  background-color: #F1F1F6;
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.table th {
+  position: sticky;
+  top: 0;
+  background-color: #F1F1F6;
+}
+
+.table th,
+.table td {
+  padding: 1.2rem 1.5rem;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #E8E8E8;
+  font-size: 1.5rem;
+  transition: all .3s;
+}
+
+.table tbody tr:hover {
+  background-color: #F1F1F6;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 3px solid #E8E8E8;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.control-pane__buttons {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  color: #4e4b43;
+  border: 2px solid #afada7;
+  background-color: white;
+  font-size: 1.8rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: .5rem;
+}
+
+.btn:disabled,
+.btn[disabled] {
+  background-color: #D3D3D3;
+  border: 0;
+}
+
+#open-photo {
+  text-align: center;
+} */
+
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.footer__link:link,
+.footer__link:visited {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: black;
+}
+
+.footer i {
+  margin-right: 1rem;
+}

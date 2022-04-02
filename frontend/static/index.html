@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/1.png" type="image/png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Exif Removal</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <img src="./images/logo.png" alt="" class="header__logo">
+    <h1 class="heading-1">EXIF REMOVAL .</h1>
+  </header>
+
+
+  <div class="main__content">
+
+    <div class="control-panel">
+      <img src="./images/placeholder.png" alt="" class="photo-preview" id="previewImage">
+      <div class="control-pane__buttons">
+        <input type="file" name="photo" id="photo">
+        <label for="photo" class="btn" id="open-photo">Choose a file</label>
+
+        <button class="btn" id="upload-photo" disabled onclick="uploadImage()">Upload Photo</button>
+        <button class="btn" id="remove-data" disabled onclick="removeData()">Remove Data</button>
+      </div>
+    </div>
+    <div class="table-content">
+      <div class="table-wrapper">
+        <table class="table" id="table-info">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Property</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="map-source">
+    <div class="map" id="map"></div>
+  </div>
+
+  <footer class="footer">
+    <a href="https://github.com/wujiocean" class="footer__link" target="_blank"><i class="fab fa-github"></i>GITHUB</a>
+  </footer>
+
+  <script defer src="./js/main.js"></script>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=<API_KEY>&callback=initMap"></script>
+</body>
+
+</html>

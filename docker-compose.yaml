@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+    aiohttp:
+        build: ./server
+        container_name: aiohttp
+    nginx:
+        build: ./frontend
+        container_name: nginx
+        ports:
+            - target: 80
+              published: 80
